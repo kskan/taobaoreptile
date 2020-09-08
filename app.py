@@ -1,4 +1,3 @@
-from flask import Flask
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time
@@ -46,7 +45,7 @@ def is_number(s):
 
 if __name__ == '__main__':
     # 登陆密码和账号
-    print("——————————————欢迎使用商品商品爬虫————————————————")
+    print("——————————————欢迎使用商品爬虫————————————————")
     print("1.本系统适用于现在用户在商品于兽次元商品同步问题，代码完全开源，但是请勿对其他友商进行攻击或者窃取，本系统一概不负责")
     print("2.使用本系统确保您的机子有Chrome85版本，且现在已经登陆淘宝账号（稍后爬虫需要使用）")
     print("3.请前往您自己的商品，所有分类(xxxxx.taobao.com/search.htm),（爬虫数据）")
