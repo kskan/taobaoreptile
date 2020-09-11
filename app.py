@@ -17,7 +17,7 @@ def createcsv():
     path = app_path()+"/taobao.csv"
     with open(path, 'w') as f:
         csv_write = csv.writer(f)
-        csv_head = ["bigimg","title","price","longimg"]
+        csv_head = ["id","bigimg","title","price","longimg"]
         csv_write.writerow(csv_head)
 
 def write_csv(data_row):
@@ -122,6 +122,7 @@ if __name__ == '__main__':
             title = driver.find_element_by_class_name("tb-main-title")
             titlename = title.get_attribute("data-title")
             price = driver.find_element_by_class_name("tb-rmb-num").get_attribute("innerHTML")
+            csvlist.append(str(a))
             csvlist.append(bigsrc)
             csvlist.append(titlename)
             csvlist.append(price)
